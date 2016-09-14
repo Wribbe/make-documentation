@@ -1,0 +1,60 @@
+.PHONY: print
+print :
+	# '\#' marks a comment.
+
+	##Makefiles can contain 5 kinds of things:
+	#   - explicit rules.
+	#   - implicit rules.
+	#   - variable definitions.
+	#   - directives.
+	#   - comments.
+
+	##Explicit Rules.
+	#----------------
+	# An explicit rule dictate how to remake a specific target.
+	# The prerequisites of the target is the files that that target needs to be
+	# rebuilt. May also give the recipe for the prerequisites.
+
+	##Implicit Rules.
+	#----------------
+	# An implicit rule states when and how a class of files should be remade based
+	# on their names. It describes how a target may depend on a similarly named
+	# file and provide a recipe to create or update such a target.
+
+	##Variable Definition.
+	#---------------------
+	# Specifies a text string value for a variable, which can be substituted into
+	# text later.
+
+	##Directive.
+	#-----------
+	# A directive instruct make to do something special while reading the make
+	# file:
+	#   - Reading another makefile.
+	#   - Make decisions about ignoring or including part of the make file.
+	#   - Using a verbatim multi-line string to define variables.
+
+	##Comments.
+	#----------
+	# A comment is marked with a '#' character. Literal '#' are written as \#.
+	# Comments cannot be used inside variable references and/or functions calls.
+	# Comments within a recipe are passed along to the shell which decides what to
+	# do with it.
+	#
+	# If a comment is included in a define statement, the comment is
+	# preserved and will be included in the expanded definition and treated as a
+	# comment or a recipe text depending on the expansion context.
+
+	##Splitting lines.
+	#-----------------
+	# A backslash '\' at the end of a line signals to make that the next line is
+	# the continuation of the previous line. Line splitting is handled differently
+	# for recipe lines then for non-recipe lines.
+
+	##Makefile naming.
+	#-----------------
+	# make fill automatically search for the filenames, in order:
+	#   - GNUmakefile
+	#   - makefile
+	#   - Makefile
+	# Other names can be specified with the -f <name>/--file=<name> flag.
